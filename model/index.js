@@ -23,6 +23,9 @@ const db = {};
 db.sequelize = sequelize;
 db.user = require("../model/user")(sequelize, DataTypes);
 db.address = require("./addres")(sequelize, DataTypes);
+db.photo = require("./photos")(sequelize, DataTypes);
+db.category = require("./category")(sequelize, DataTypes);
+db.size = require("./size")(sequelize, DataTypes);
 db.sequelize
   .sync({ alter: true, force: true })
   .then(() => {
